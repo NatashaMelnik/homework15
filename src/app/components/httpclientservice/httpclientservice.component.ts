@@ -15,9 +15,6 @@ export class HttpclientserviceComponent implements OnInit {
     console.log('in HttpclientserviceComponent');
     this.userService.GetUsers().subscribe((res) => {
       this.users = res;
-      console.log(res);
-      console.log(this.users);
     });
-    // console.log(this.users);
   }
 }
