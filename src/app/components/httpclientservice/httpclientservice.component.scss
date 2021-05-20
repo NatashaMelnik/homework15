@@ -1,34 +1,80 @@
-table,
-tr,
-td {
+.container {
+  margin: -8px;
+  background-color: blue;
+  background-size: cover;
+  opacity: .9;
+  overflow: hidden;
+  height: 90.5vh;
+}
+
+.header{
+  display: flex;
+  height: 100px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border: 2px solid black;
+  background-color: white;
+  h1{
+    margin-left: 50px;
+  }
+}
+
+#head{
+  background-color: red;
+}
+
+#bodyt{
+  background-color: rgb(162, 195, 243);
+}
+
+img{
+  width: 180px;
+  margin: 10px 10px 10px 10px;
+}
+
+
+.tbl {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  min-height: 50px;
+}
+
+.cell {
+  flex: 4;
   border: 1px solid black;
-  width: 200;
 }
 
-table,
-th,
-td {
-  border: 1px solid grey;
-  border-collapse: collapse;
+.cell:nth-child(1) {
+  flex: 1;
+}
+
+.cell:nth-child(2) {
+  flex: 2;
+}
+
+.cell.span4-5 {
+  flex: 8 24px;
+}
+
+.cell.span3-4 {
+  flex: 8 24px;
+}
+
+.cell.span3-5 {
+  flex: 12 36px;
+}
+
+.row:first-child .cell {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+
+.row .cell {
   padding: 5px;
-}
-
-table tr:nth-child(odd) {
-  background-color: #f1f1f1;
-}
-
-table tr:nth-child(even) {
-  background-color: #ffffff;
-}
-
-.name{
-    width: 200px;
-}
-
-.id{
-    width: 30px;
-}
-
-.email{
-    width: 150px;
+  box-sizing: border-box;
 }
