@@ -1,27 +1,37 @@
 <app-nav></app-nav>
 
-<h1>Suspected Criminals</h1>
-
-<table>
-  <tr>
-    <td class="id">id</td>
-    <td class="name">name</td>
-    <td class="email">email</td>
-    <td>username</td>
-    <td>address</td>
-  </tr>
-</table>
-
-<table>
-  <div *ngIf="users">
-    <div *ngFor="let user of users">
-      <tr>
-        <td class="id">{{ user.id }}</td>
-        <td class="name">{{ user.name }}</td>
-        <td class="email">{{ user.email }}</td>
-        <td>{{ user.username }}</td>
-        <td>{{ user.address.street }}, {{ user.address.suite }}, {{ user.address.city }}</td>
-      </tr>
-    </div>
+<div class="container">
+  
+  <div class="header">
+    <img src="https://www.logaster.ru/blog/wp-content/uploads/sites/2/2020/07/h_police-nevada-logo_13.png" alt="police">
+    <h1 class="title">Suspected Criminals</h1>
   </div>
-</table>
+  
+  <hr>
+  
+  <table class="tbl" id="head">
+     <tr class="row">
+      <td class="cell"><b>Number</b></td>
+      <td class="cell"><b>Name, Second Name</b></td>
+      <td class="cell"><b>Mail</b></td>
+      <td class="cell"><b>Artname</b></td>
+      <td class="cell"><b>Address</b></td>
+    </tr>
+  </table>
+  
+  <table class="tbl" id="bodyt">
+    <div *ngIf="users">
+      <div *ngFor="let user of users">
+        <tr class="row">
+          <td class="cell">{{ user.id }}</td>
+          <td class="cell">{{ user.name }}</td>
+          <td class="cell">{{ user.email }}</td>
+          <td class="cell">{{ user.username }}</td>
+          <td class="cell">{{ user.address.street }}, {{ user.address.suite }}, {{ user.address.city }}</td>
+        </tr>
+      </div>
+    </div>
+  </table>
+
+</div>
+
