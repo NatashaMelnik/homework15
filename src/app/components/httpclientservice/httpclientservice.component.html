@@ -1,0 +1,18 @@
+<app-nav></app-nav>
+
+<h1>Suspected Criminals</h1>
+
+<table>
+  <div *ngIf="users">
+    <div *ngFor="let user of users">
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.address.street }}, {{ user.address.suite }}, {{user.address.city}}</td>
+        <!-- <td></td> -->
+      </tr>
+    </div>
+  </div>
+</table>
