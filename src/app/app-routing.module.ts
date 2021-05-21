@@ -4,15 +4,14 @@ import { GetservComponent } from './components/getserv/getserv.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpclientserviceComponent } from './components/httpclientservice/httpclientservice.component';
 import { ListservComponent } from './components/listserv/listserv.component';
-
-// const routes: Routes = [];
+import { TablepaginComponent } from './components/tablepagin/tablepagin.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'getserv', component: GetservComponent},
   {path: 'httpclientservice', component: HttpclientserviceComponent},
-  {path: 'listserv', component: ListservComponent}
-
+  {path: 'listserv', component: ListservComponent},
+  {path: 'tablepagin', component: TablepaginComponent}
 ];
 
 @NgModule({

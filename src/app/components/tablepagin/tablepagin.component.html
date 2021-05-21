@@ -1,0 +1,26 @@
+<app-nav></app-nav>
+
+<p>tablepagin works!</p>
+
+<div *ngIf="tableData">
+    <table>
+        <thread>
+            <tr>
+                <td>userId</td>
+                <td>id</td>
+                <td>title</td>
+                <td>completed</td>
+            </tr>
+        </thread>
+        <tbody>
+            <tr *ngFor="let item of tableData | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+                <td>{{item.userId}}</td>
+                <td>{{item.id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.completed}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ngb-pagination [(page)]="page" [(pageSize)]="pageSize" [(collectionSize)]="tableData.length"></ngb-pagination>
+
+</div>
