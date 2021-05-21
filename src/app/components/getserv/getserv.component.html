@@ -1,24 +1,25 @@
-
 <app-nav></app-nav>
 
 <div>
-
-    <div>right away service date get:</div>
-    <div *ngIf="planets">
-        <div *ngFor="let planet of planets">
-            <div>{{ planet.name}}</div>
-            <div>{{ planet.orbital_period}}</div>
-            <div>{{ planet.rotation_period}}</div>
-            <div>{{ planet.diameter}}</div>
-            <div>{{ planet.climate}}</div>
-            <div>{{ planet.gravity}}</div>
-            <div>{{ planet.terrain}}</div>
-            <div>{{ planet.surface_water}}</div>
-
-        </div>
-
+  <h2>Right away service date get:</h2>
+  <div *ngIf="planets">
+    <div *ngFor="let planet of planets">
+      <h3>Name: {{ planet.name }}</h3>
+      <div>Orbital period: {{ planet.orbital_period }}</div>
+      <div>Rotation period: {{ planet.rotation_period }}</div>
+      <div>Diameter: {{ planet.diameter }}</div>
+      <div>Climate: {{ planet.climate }}</div>
+      <div>Gravity: {{ planet.gravity }}</div>
+      <div>Terrain: {{ planet.terrain }}</div>
+      <div>Surface water: {{ planet.surface_water }}</div>
     </div>
-
+  </div>
 </div>
 
+<hr>
 
+<div>
+    <h2>On click service</h2>
+    <button>show service</button>
+    <div></div>
+</div>
