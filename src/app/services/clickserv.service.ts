@@ -51,4 +51,7 @@ export class ClickservService {
     this.idNext = this.idNext + 1;
   }
 
+
+
+  
 }

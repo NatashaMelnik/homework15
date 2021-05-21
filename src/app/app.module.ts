@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpclientserviceComponent } from './components/httpclientservice/httpclientservice.component';
 import { GetservComponent } from './components/getserv/getserv.component';
@@ -13,6 +14,7 @@ import { ListservComponent } from './components/listserv/listserv.component';
 import { HttpserviceService } from './services/httpservice.service';
 import { ClickservService } from './services/clickserv.service';
 import { ImmediatelyService } from './services/immediately.service';
+import { SearchPipe } from './components/listserv/search.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,12 +22,14 @@ import { ImmediatelyService } from './services/immediately.service';
     GetservComponent,
     NavComponent,
     HomeComponent,
-    ListservComponent
+    ListservComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     HttpserviceService,

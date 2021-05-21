@@ -1,3 +1,10 @@
 <app-nav></app-nav>
 
 <p>listserv works!</p>
+
+<div *ngIf="titles">
+  <input type="text" #input (input)="Search(input.value)" />
+  <div *ngFor="let title of titles">
+    <div>{{ title.title }}</div>
+  </div>
+</div>

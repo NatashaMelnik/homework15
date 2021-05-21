@@ -38,4 +38,5 @@ export class GetservComponent implements OnInit {
     this.todosService.AddTodo(title);
     this.todos = this.todosService.GetTodos();
   }
+
 }
