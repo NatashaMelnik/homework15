@@ -1,7 +1,7 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ClickservService } from '../../services/clickserv.service';
 
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-listserv',
@@ -16,10 +16,11 @@ export class ListservComponent implements OnInit {
   ngOnInit(): void {
     let todos = this.titleServ.GetTodos();
     this.titles = todos;
+    this.titles.sort((a, b) => a.title.localeCompare(b.title)); // sort
     this.GetTitles(this.titles);
   }
 
-  public GetTitles(arr) {
+  GetTitles(arr) {
     let temp = arr.forEach((obj) => {
       delete obj.id;
     });
@@ -35,5 +36,4 @@ export class ListservComponent implements OnInit {
       this.ngOnInit();
     }
   }
-
 }
