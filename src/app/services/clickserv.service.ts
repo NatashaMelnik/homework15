@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 
 // Несколько сервисов для запросов. Некоторые сразу, а некоторые по клику.
 export class ClickservService {
+  idNext = 8;
   todosArr = [
     {
       id: 1,
@@ -46,6 +47,8 @@ export class ClickservService {
   }
 
   public AddTodo(title: string) {
-    this.todosArr.push({ id: this.todosArr.length + 1, title: title });
+    this.todosArr.push({ id: this.idNext, title: title });
+    this.idNext = this.idNext + 1;
   }
+
 }

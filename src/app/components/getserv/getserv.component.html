@@ -23,10 +23,18 @@
   <button (click)="GetOnClickServ()">show service</button>
   <div *ngIf="showTodos && todos">
     <div *ngFor="let todo of todos">
-
-
-
-
+      <div>
+        {{ todo.id }}. {{ todo.title }}
+        <span (click)="removeTodo(todo.id)">x</span>
+      </div>
+    </div>
+    <div>
+        <input type="text" #todoTitle>
+        <button (click)="addTodo(todoTitle.value)">Add todo in service</button>
     </div>
   </div>
+  <!-- <div>
+      <input type="text" #todoTitle>
+      <button (click)="addTodo(todoTitle.value)">Add todo in service</button>
+  </div> -->
 </div>
