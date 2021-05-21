@@ -1,6 +1,24 @@
 
 <app-nav></app-nav>
 
-<div>right away service date get:</div>
+<div>
+
+    <div>right away service date get:</div>
+    <div *ngIf="planets">
+        <div *ngFor="let planet of planets">
+            <div>{{ planet.name}}</div>
+            <div>{{ planet.orbital_period}}</div>
+            <div>{{ planet.rotation_period}}</div>
+            <div>{{ planet.diameter}}</div>
+            <div>{{ planet.climate}}</div>
+            <div>{{ planet.gravity}}</div>
+            <div>{{ planet.terrain}}</div>
+            <div>{{ planet.surface_water}}</div>
+
+        </div>
+
+    </div>
+
+</div>
 
 

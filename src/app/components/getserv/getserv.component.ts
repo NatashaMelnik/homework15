@@ -7,10 +7,13 @@ import { ImmediatelyService } from '../../services/immediately.service';
   styleUrls: ['./getserv.component.scss']
 })
 export class GetservComponent implements OnInit {
+  public planets;
 
-  constructor() { }
+  constructor(private planetsService: ImmediatelyService) { }
 
   ngOnInit(): void {
+    this.planets = this.planetsService.GetPlanets();
+    console.log(this.planets);
   }
 
 }
