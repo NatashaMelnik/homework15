@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImmediatelyService } from '../../services/immediately.service';
 
 @Component({
   selector: 'app-getserv',

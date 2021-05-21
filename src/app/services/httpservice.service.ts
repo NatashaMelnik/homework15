@@ -5,11 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class HttpserviceService {
+  link = 'https://jsonplaceholder.typicode.com/users';
 
   constructor(private http: HttpClient) { }
 
   public GetUsers(){
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.http.get(this.link);
   }
 
 }

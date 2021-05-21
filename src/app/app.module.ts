@@ -11,7 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ListservComponent } from './components/listserv/listserv.component';
 
 import { HttpserviceService } from './services/httpservice.service';
-
+import { ClickservService } from './services/clickserv.service';
+import { ImmediatelyService } from './services/immediately.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,9 @@ import { HttpserviceService } from './services/httpservice.service';
     HttpClientModule
   ],
   providers: [
-    HttpserviceService
+    HttpserviceService,
+    ClickservService,
+    ImmediatelyService
   ],
   bootstrap: [AppComponent]
 })
