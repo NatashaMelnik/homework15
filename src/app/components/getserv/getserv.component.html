@@ -16,10 +16,17 @@
   </div>
 </div>
 
-<hr>
+<hr />
 
 <div>
-    <h2>On click service</h2>
-    <button>show service</button>
-    <div></div>
+  <h2>On click service:</h2>
+  <button (click)="GetOnClickServ()">show service</button>
+  <div *ngIf="showTodos && todos">
+    <div *ngFor="let todo of todos">
+
+
+
+
+    </div>
+  </div>
 </div>

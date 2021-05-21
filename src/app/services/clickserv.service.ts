@@ -1,18 +1,51 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 
 // Несколько сервисов для запросов. Некоторые сразу, а некоторые по клику.
-
 export class ClickservService {
+  todosArr = [
+    {
+      id: 1,
+      title: 'delectus aut autem',
+    },
+    {
+      id: 2,
+      title: 'quis ut nam facilis et officia qui',
+    },
+    {
+      id: 3,
+      title: 'fugiat veniam minus',
+    },
+    {
+      id: 4,
+      title: 'et porro tempora',
+    },
+    {
+      id: 5,
+      title: 'laboriosam mollitia et enim quasi adipisci quia provident illum',
+    },
+    {
+      id: 6,
+      title: 'qui ullam ratione quibusdam voluptatem quia omnis',
+    },
+    {
+      id: 7,
+      title: 'illo expedita consequatur quia in',
+    },
+  ];
 
-  // constructor(private http: HttpClient) { }
+  public GetTodos() {
+    return this.todosArr;
+  }
 
-  // public GetUsers(){
-  //   return this.http.get('https://jsonplaceholder.typicode.com/users');
-  // }
+  public RemoveTodo(id: number) {
+    return (this.todosArr = this.todosArr.filter((todo) => todo.id !== id));
+  }
 
+  public AddTodo(title: string) {
+    this.todosArr.push({ id: this.todosArr.length + 1, title: title });
+  }
 }

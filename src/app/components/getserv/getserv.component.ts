@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ImmediatelyService } from '../../services/immediately.service';
+import { ClickservService } from '../../services/clickserv.service';
 
 @Component({
   selector: 'app-getserv',
@@ -8,12 +9,21 @@ import { ImmediatelyService } from '../../services/immediately.service';
 })
 export class GetservComponent implements OnInit {
   public planets;
+  public todos;
+  showTodos = false;
 
-  constructor(private planetsService: ImmediatelyService) { }
+  constructor(private planetsService: ImmediatelyService, private todosService: ClickservService) { }
 
   ngOnInit(): void {
     this.planets = this.planetsService.GetPlanets();
     console.log(this.planets);
   }
+
+  GetOnClickServ() : void {
+    this.todos = this.todosService.GetTodos();
+    this.showTodos = true;
+    console.log(this.todos);
+  }
+
 
 }
