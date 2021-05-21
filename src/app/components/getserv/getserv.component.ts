@@ -10,7 +10,7 @@ import { ClickservService } from '../../services/clickserv.service';
 export class GetservComponent implements OnInit {
   public planets;
   public todos;
-  showTodos = true; // set false!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  showTodos = false; // set false!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
   constructor(
     private planetsService: ImmediatelyService,
@@ -19,13 +19,11 @@ export class GetservComponent implements OnInit {
 
   ngOnInit(): void {
     this.planets = this.planetsService.GetPlanets();
-    // console.log(this.planets);
   }
 
   GetOnClickServ(): void {
     this.todos = this.todosService.GetTodos();
     this.showTodos = true;
-    // console.log(this.todos);
   }
 
   removeTodo(id: number) {

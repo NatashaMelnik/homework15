@@ -2,16 +2,18 @@
 
 <div>
   <h2>Right away service date get:</h2>
-  <div *ngIf="planets">
+  <div *ngIf="planets" class="planets">
     <div *ngFor="let planet of planets">
-      <h3>Name: {{ planet.name }}</h3>
-      <div>Orbital period: {{ planet.orbital_period }}</div>
-      <div>Rotation period: {{ planet.rotation_period }}</div>
-      <div>Diameter: {{ planet.diameter }}</div>
-      <div>Climate: {{ planet.climate }}</div>
-      <div>Gravity: {{ planet.gravity }}</div>
-      <div>Terrain: {{ planet.terrain }}</div>
-      <div>Surface water: {{ planet.surface_water }}</div>
+      <div class="planet-item">
+        <h3>{{ planet.name }}</h3>
+        <div>Orbital period: {{ planet.orbital_period }}</div>
+        <div>Rotation period: {{ planet.rotation_period }}</div>
+        <div>Diameter: {{ planet.diameter }}</div>
+        <div>Climate: {{ planet.climate }}</div>
+        <div>Gravity: {{ planet.gravity }}</div>
+        <div>Terrain: {{ planet.terrain }}</div>
+        <div>Surface water: {{ planet.surface_water }}</div>
+      </div>
     </div>
   </div>
 </div>
@@ -21,20 +23,16 @@
 <div>
   <h2>On click service:</h2>
   <button (click)="GetOnClickServ()">show service</button>
-  <div *ngIf="showTodos && todos">
+  <div *ngIf="showTodos && todos" class="todos">
     <div *ngFor="let todo of todos">
       <div>
         {{ todo.id }}. {{ todo.title }}
         <span (click)="removeTodo(todo.id)">x</span>
       </div>
     </div>
-    <div>
-        <input type="text" #todoTitle>
-        <button (click)="addTodo(todoTitle.value)">Add todo in service</button>
+    <div class="input-div">
+      <input type="text" #todoTitle placeholder="write todo" />
+      <button (click)="addTodo(todoTitle.value); todoTitle.value = ''">Add todo in service</button>
     </div>
   </div>
-  <!-- <div>
-      <input type="text" #todoTitle>
-      <button (click)="addTodo(todoTitle.value)">Add todo in service</button>
-  </div> -->
 </div>
