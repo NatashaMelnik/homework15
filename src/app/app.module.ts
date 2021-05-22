@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,7 @@ import { TablepaginComponent } from './components/tablepagin/tablepagin.componen
 import { HttpserviceService } from './services/httpservice.service';
 import { ClickservService } from './services/clickserv.service';
 import { ImmediatelyService } from './services/immediately.service';
-
+import { Myintersept } from './services/myintersept.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,12 @@ import { ImmediatelyService } from './services/immediately.service';
   providers: [
     HttpserviceService,
     ClickservService,
-    ImmediatelyService
+    ImmediatelyService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: Myintersept,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
