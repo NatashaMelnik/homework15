@@ -7,7 +7,7 @@ import { TablepaginComponent } from './components/tablepagin/tablepagin.componen
 import { InterceptrealizComponent } from './components/interceptrealiz/interceptrealiz.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/getserv', pathMatch:'full' },
+  { path: '', redirectTo: '/getserv', pathMatch: 'full' },
   { path: 'getserv', component: GetservComponent },
   { path: 'httpclientservice', component: HttpclientserviceComponent },
   { path: 'listserv', component: ListservComponent },

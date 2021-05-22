@@ -282,20 +282,20 @@ export class ClickservService {
     }
   ];
 
-  public GetTodos() {
+  public GetTodos(): Array<object> {
     return this.todosArr;
   }
 
-  public GetPags() {
+  public GetPags(): Array<object> {
     return this.pagginArr;
   }
 
-  public RemoveTodo(id: number) {
+  public RemoveTodo(id: number): Array<object> {
     return (this.todosArr = this.todosArr.filter((todo) => todo.id !== id));
   }
 
-  public AddTodo(title: string) {
-    this.todosArr.push({ id: this.idNext, title: title });
+  public AddTodo(title: string): void {
+    this.todosArr.push({ id: this.idNext, title });
     this.idNext = this.idNext + 1;
   }
 }

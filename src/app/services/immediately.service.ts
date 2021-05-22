@@ -41,7 +41,7 @@ export class ImmediatelyService {
 
   planets = [this.planet2, this.planet4, this.planet1];
 
-  public GetPlanets(){
+  public GetPlanets(): Array<object> {
     return this.planets;
   }
 

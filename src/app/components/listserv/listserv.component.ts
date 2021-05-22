@@ -14,20 +14,20 @@ export class ListservComponent implements OnInit {
   constructor(private titleServ: ClickservService) {}
 
   ngOnInit(): void {
-    let todos = this.titleServ.GetTodos();
+    const todos = this.titleServ.GetTodos();
     this.titles = todos;
     this.titles.sort((a, b) => a.title.localeCompare(b.title)); // sort
     this.GetTitles(this.titles);
   }
 
-  GetTitles(arr) {
-    let temp = arr.forEach((obj) => {
+  GetTitles(arr): Array<object> {
+    const temp = arr.forEach((obj) => {
       delete obj.id;
     });
     return temp;
   }
 
-  Search(str) {
+  Search(str): void {
     if (str !== '') {
       this.titles = this.titles.filter((res) => {
         return res.title.toLowerCase().match(str.toLowerCase());

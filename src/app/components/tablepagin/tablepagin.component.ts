@@ -8,8 +8,8 @@ import { ClickservService } from '../../services/clickserv.service';
 })
 export class TablepaginComponent implements OnInit {
   tableData = [];
-  p: number = 1;
-  collection: any[]; 
+  p = 1;
+  collection = [];
 
   constructor(private clickserv: ClickservService) {}
 

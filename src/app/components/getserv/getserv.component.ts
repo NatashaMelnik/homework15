@@ -26,12 +26,12 @@ export class GetservComponent implements OnInit {
     this.showTodos = true;
   }
 
-  removeTodo(id: number) {
+  removeTodo(id: number): void {
     this.todosService.RemoveTodo(id);
     this.todos = this.todosService.GetTodos();
   }
 
-  addTodo(title: string) {
+  addTodo(title: string): void {
     if (!title) {
       return;
     }

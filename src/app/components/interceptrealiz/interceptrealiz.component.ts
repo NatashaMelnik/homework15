@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./interceptrealiz.component.scss'],
 })
 export class InterceptrealizComponent implements OnInit {
-  constructor(_http: HttpClient) {
-    // _http.get('https://github.com/NatashaMelnik').subscribe((result) => {
+  constructor(http: HttpClient) {
+    // http.get('https://github.com/NatashaMelnik').subscribe((result) => {
       // console.log(result);
     // });
   }

@@ -9,7 +9,7 @@ export class HttpserviceService {
 
   constructor(private http: HttpClient) { }
 
-  public GetUsers(){
+  public GetUsers(): any {
     return this.http.get(this.link);
   }
 
