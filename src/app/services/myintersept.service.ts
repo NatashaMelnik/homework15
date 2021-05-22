@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class Myintersept implements HttpInterceptor {
-  num = '5';
-  type = 'starships';
+  num = 'repositories';
+  type = 'tab';
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     // throw new Error('Method not implemented.');

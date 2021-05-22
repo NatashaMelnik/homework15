@@ -12,7 +12,6 @@ export class HttpclientserviceComponent implements OnInit {
   constructor(private userService: HttpserviceService) {}
 
   ngOnInit(): void {
-    console.log('in HttpclientserviceComponent');
     this.userService.GetUsers().subscribe((res) => {
       this.users = res;
     });

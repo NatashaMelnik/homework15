@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { HttpclientserviceComponent } from './components/httpclientservice/httpclientservice.component';
 import { GetservComponent } from './components/getserv/getserv.component';
 import { NavComponent } from './components/nav/nav.component';
-import { HomeComponent } from './components/home/home.component';
 import { ListservComponent } from './components/listserv/listserv.component';
 import { TablepaginComponent } from './components/tablepagin/tablepagin.component';
 
@@ -18,15 +17,16 @@ import { HttpserviceService } from './services/httpservice.service';
 import { ClickservService } from './services/clickserv.service';
 import { ImmediatelyService } from './services/immediately.service';
 import { Myintersept } from './services/myintersept.service';
+import { InterceptrealizComponent } from './components/interceptrealiz/interceptrealiz.component';
 @NgModule({
   declarations: [
     AppComponent,
     HttpclientserviceComponent,
     GetservComponent,
     NavComponent,
-    HomeComponent,
     ListservComponent,
-    TablepaginComponent
+    TablepaginComponent,
+    InterceptrealizComponent
   ],
   imports: [
     BrowserModule,
