@@ -1,26 +1,25 @@
 <app-nav></app-nav>
 
-<p>tablepagin works!</p>
+<h2>Table pagination</h2>
 
 <div *ngIf="tableData">
-    <table>
+    <table class="tbl" id="head">
         <thread>
-            <tr>
-                <td>userId</td>
-                <td>id</td>
-                <td>title</td>
-                <td>completed</td>
+            <tr class="row">
+                <td class="cell"><b>userId</b></td>
+                <td class="cell"><b>id</b></td>
+                <td class="cell"><b>title</b></td>
+                <td class="cell"><b>completed</b></td>
             </tr>
         </thread>
         <tbody>
-            <tr *ngFor="let item of tableData | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-                <td>{{item.userId}}</td>
-                <td>{{item.id}}</td>
-                <td>{{item.title}}</td>
-                <td>{{item.completed}}</td>
+            <tr class="row" *ngFor="let item of collection | paginate: { itemsPerPage: 5, currentPage: p }">
+                <td class="cell">{{item.userId}}</td>
+                <td class="cell">{{item.id}}</td>
+                <td class="cell">{{item.title}}</td>
+                <td class="cell">{{item.completed}}</td>
             </tr>
-        </tbody>
+        </tbody>     
     </table>
-    <ngb-pagination [(page)]="page" [(pageSize)]="pageSize" [(collectionSize)]="tableData.length"></ngb-pagination>
-
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

@@ -10,8 +10,10 @@ export class TablepaginComponent implements OnInit {
   // @ViewChild('table-body') tableBody: ElementRef;
   // this.tableBody.nativeElement.innerHTML
   tableData = [];
-  page = 1;
-  pageSize = 10;
+  public page = 1;
+  public pageSize = 5;
+  p: number = 1;
+  collection: any[]; 
   state = {
     querySet: this.tableData,
     page: 1,
@@ -23,6 +25,7 @@ export class TablepaginComponent implements OnInit {
 
   ngOnInit(): void {
     this.tableData = this.clickserv.GetPags();
+    this.collection = this.tableData;
     // console.log(this.tableData);
     // this.buildTable();
   }

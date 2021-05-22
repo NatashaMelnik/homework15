@@ -1,5 +1,60 @@
-// tr, td, table {
-//     border: 1px solid rgba(0, 0, 0, .11);
-//     padding: 10px;
-//     width: 500px
-// }
+.tbl {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  min-height: 50px;
+}
+
+.cell {
+  flex: 4;
+  border: 1px solid black;
+}
+
+.cell:nth-child(1) {
+  flex: 1;
+}
+
+.cell:nth-child(2) {
+  flex: 2;
+}
+
+.cell.span4-5 {
+  flex: 8 24px;
+}
+
+.cell.span3-4 {
+  flex: 8 24px;
+}
+
+.cell.span3-5 {
+  flex: 12 36px;
+}
+
+.row:first-child .cell {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+
+.row .cell {
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.cell {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  background-color: #eee;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+.cell:hover {
+  background-color: #eee;
+}
